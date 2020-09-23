@@ -23,7 +23,7 @@ export function manageFriends(state = {friends: []}, action){
       console.log("======RETURNED=======")
       console.log({ 
           ...state,
-          friends: arr
+          friends: filtered
         })
         
       return (

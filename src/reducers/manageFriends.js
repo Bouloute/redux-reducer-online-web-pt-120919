@@ -29,7 +29,7 @@ export function manageFriends(state = {friends: []}, action){
       return (
          { 
           ...state,
-          friends: arr
+          friends: filtered
         }
       )
       

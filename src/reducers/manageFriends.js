@@ -12,14 +12,10 @@ export function manageFriends(state = {friends: []}, action){
       )
       
     case "REMOVE_FRIEND":
-      console.log("======================================")
-      console.log("======ORIGINAL=======")
-      console.log(state)
-      console.log("======FRIEND=======")
-      console.log(action.id)
-      
-      
-      var arr = state.friends;
+      const copiedState = {...state}
+      const arr = copiedState.friends
+      console.log("======COPIED=======")
+      console.log(arr)
       for( var i = 0; i < arr.length; i++){
         if ( arr[i].id === action.id) { 
           arr.splice(i, 1); 
@@ -27,15 +23,15 @@ export function manageFriends(state = {friends: []}, action){
         }
       }
       console.log("======MODIFIED=======")
-      console.log(
-        { 
-          ...state,
-          friends: arr
-        }
-            
-      )
+      console.log(arr)
       console.log("======ORIGINAL=======")
       console.log(state)
+      console.log("======RETURNED=======")
+      console.log({ 
+          ...state,
+          friends: arr
+        })
+        
       return (
          { 
           ...state,

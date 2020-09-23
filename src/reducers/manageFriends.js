@@ -12,7 +12,7 @@ export function manageFriends(state = {friends: []}, action){
       )
       
     case "REMOVE_FRIEND":
-      const arr = {...state}
+      let arr = {...state}
       console.log("======COPIED=======")
       console.log(arr)
       var filtered = array.filter(function(value, index, arr){ return value > action.id;});

@@ -15,7 +15,7 @@ export function manageFriends(state = {friends: []}, action){
       let arr = {...state}.friends
       console.log("======COPIED=======")
       console.log(arr)
-      var filtered = arr.filter(function(value, index, arr){ return value > action.id;});
+      var filtered = arr.filter(function(value, index, arr){ return value.id > action.id;});
       console.log("======MODIFIED=======")
       console.log(filtered)
       console.log("======ORIGINAL=======")

@@ -13,19 +13,8 @@ export function manageFriends(state = {friends: []}, action){
       
     case "REMOVE_FRIEND":
       let arr = {...state}.friends
-      console.log("======COPIED=======")
-      console.log(arr)
       var filtered = arr.filter(function(value, index, arr){ return value.id != action.id;});
-      console.log("======MODIFIED=======")
-      console.log(filtered)
-      console.log("======ORIGINAL=======")
-      console.log(state)
-      console.log("======RETURNED=======")
-      console.log({ 
-          ...state,
-          friends: filtered
-        })
-        
+      
       return (
          { 
           ...state,
